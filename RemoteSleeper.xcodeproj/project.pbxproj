@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AFC3E3F1687A55000B0E967 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC3E3E1687A55000B0E967 /* Cocoa.framework */; };
+		1AFC3E491687A55000B0E967 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC3E471687A55000B0E967 /* InfoPlist.strings */; };
+		1AFC3E4B1687A55000B0E967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E4A1687A55000B0E967 /* main.m */; };
+		1AFC3E4F1687A55000B0E967 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC3E4D1687A55000B0E967 /* Credits.rtf */; };
+		1AFC3E521687A55000B0E967 /* JRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E511687A55000B0E967 /* JRAppDelegate.m */; };
+		1AFC3E551687A55000B0E967 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC3E531687A55000B0E967 /* MainMenu.xib */; };
+		1AFC3E581687A55000B0E967 /* RemoteSleeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E561687A55000B0E967 /* RemoteSleeper.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AFC3E3A1687A55000B0E967 /* RemoteSleeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteSleeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFC3E3E1687A55000B0E967 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1AFC3E411687A55000B0E967 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1AFC3E421687A55000B0E967 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1AFC3E431687A55000B0E967 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AFC3E461687A55000B0E967 /* RemoteSleeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemoteSleeper-Info.plist"; sourceTree = "<group>"; };
+		1AFC3E481687A55000B0E967 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AFC3E4A1687A55000B0E967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AFC3E4C1687A55000B0E967 /* RemoteSleeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoteSleeper-Prefix.pch"; sourceTree = "<group>"; };
+		1AFC3E4E1687A55000B0E967 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1AFC3E501687A55000B0E967 /* JRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRAppDelegate.h; sourceTree = "<group>"; };
+		1AFC3E511687A55000B0E967 /* JRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRAppDelegate.m; sourceTree = "<group>"; };
+		1AFC3E541687A55000B0E967 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1AFC3E571687A55000B0E967 /* RemoteSleeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteSleeper.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AFC3E371687A55000B0E967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFC3E3F1687A55000B0E967 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AFC3E2F1687A54F00B0E967 = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E441687A55000B0E967 /* RemoteSleeper */,
+				1AFC3E3D1687A55000B0E967 /* Frameworks */,
+				1AFC3E3B1687A55000B0E967 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AFC3E3B1687A55000B0E967 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E3A1687A55000B0E967 /* RemoteSleeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AFC3E3D1687A55000B0E967 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E3E1687A55000B0E967 /* Cocoa.framework */,
+				1AFC3E401687A55000B0E967 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AFC3E401687A55000B0E967 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E411687A55000B0E967 /* AppKit.framework */,
+				1AFC3E421687A55000B0E967 /* CoreData.framework */,
+				1AFC3E431687A55000B0E967 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1AFC3E441687A55000B0E967 /* RemoteSleeper */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E501687A55000B0E967 /* JRAppDelegate.h */,
+				1AFC3E511687A55000B0E967 /* JRAppDelegate.m */,
+				1AFC3E531687A55000B0E967 /* MainMenu.xib */,
+				1AFC3E561687A55000B0E967 /* RemoteSleeper.xcdatamodeld */,
+				1AFC3E451687A55000B0E967 /* Supporting Files */,
+			);
+			path = RemoteSleeper;
+			sourceTree = "<group>";
+		};
+		1AFC3E451687A55000B0E967 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E461687A55000B0E967 /* RemoteSleeper-Info.plist */,
+				1AFC3E471687A55000B0E967 /* InfoPlist.strings */,
+				1AFC3E4A1687A55000B0E967 /* main.m */,
+				1AFC3E4C1687A55000B0E967 /* RemoteSleeper-Prefix.pch */,
+				1AFC3E4D1687A55000B0E967 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AFC3E391687A55000B0E967 /* RemoteSleeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AFC3E5B1687A55000B0E967 /* Build configuration list for PBXNativeTarget "RemoteSleeper" */;
+			buildPhases = (
+				1AFC3E361687A55000B0E967 /* Sources */,
+				1AFC3E371687A55000B0E967 /* Frameworks */,
+				1AFC3E381687A55000B0E967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteSleeper;
+			productName = RemoteSleeper;
+			productReference = 1AFC3E3A1687A55000B0E967 /* RemoteSleeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AFC3E311687A54F00B0E967 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "James Reuss";
+			};
+			buildConfigurationList = 1AFC3E341687A54F00B0E967 /* Build configuration list for PBXProject "RemoteSleeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AFC3E2F1687A54F00B0E967;
+			productRefGroup = 1AFC3E3B1687A55000B0E967 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AFC3E391687A55000B0E967 /* RemoteSleeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AFC3E381687A55000B0E967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFC3E491687A55000B0E967 /* InfoPlist.strings in Resources */,
+				1AFC3E4F1687A55000B0E967 /* Credits.rtf in Resources */,
+				1AFC3E551687A55000B0E967 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AFC3E361687A55000B0E967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFC3E4B1687A55000B0E967 /* main.m in Sources */,
+				1AFC3E521687A55000B0E967 /* JRAppDelegate.m in Sources */,
+				1AFC3E581687A55000B0E967 /* RemoteSleeper.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AFC3E471687A55000B0E967 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFC3E481687A55000B0E967 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AFC3E4D1687A55000B0E967 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFC3E4E1687A55000B0E967 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1AFC3E531687A55000B0E967 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AFC3E541687A55000B0E967 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AFC3E591687A55000B0E967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1AFC3E5A1687A55000B0E967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1AFC3E5C1687A55000B0E967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteSleeper/RemoteSleeper-Prefix.pch";
+				INFOPLIST_FILE = "RemoteSleeper/RemoteSleeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AFC3E5D1687A55000B0E967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteSleeper/RemoteSleeper-Prefix.pch";
+				INFOPLIST_FILE = "RemoteSleeper/RemoteSleeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AFC3E341687A54F00B0E967 /* Build configuration list for PBXProject "RemoteSleeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFC3E591687A55000B0E967 /* Debug */,
+				1AFC3E5A1687A55000B0E967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AFC3E5B1687A55000B0E967 /* Build configuration list for PBXNativeTarget "RemoteSleeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AFC3E5C1687A55000B0E967 /* Debug */,
+				1AFC3E5D1687A55000B0E967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1AFC3E561687A55000B0E967 /* RemoteSleeper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1AFC3E571687A55000B0E967 /* RemoteSleeper.xcdatamodel */,
+			);
+			currentVersion = 1AFC3E571687A55000B0E967 /* RemoteSleeper.xcdatamodel */;
+			path = RemoteSleeper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1AFC3E311687A54F00B0E967 /* Project object */;
+}

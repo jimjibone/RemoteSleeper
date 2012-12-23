@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RemoteSleeper' target in the 'RemoteSleeper' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
