@@ -8,6 +8,14 @@
 
 #import "JRAppDelegate.h"
 
+@interface JRAppDelegate ()
+- (void)fileNotifications;
+- (void)receiveSleepNote:(NSNotification*)note;
+- (void)receiveWakeNote:(NSNotification*)note;
+- (void)loadPreferences;
+- (void)savePreferences;
+@end
+
 @implementation JRAppDelegate
 
 - (void)dealloc
@@ -24,7 +32,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	// Insert code here to initialize your application
+	isSleepEnabled = [self.sleepEnabled state];
+	[self loadPreferences];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.jamesreuss.RemoteSleeper" in the user's Application Support directory.
@@ -142,8 +151,123 @@
     }
 }
 
+- (IBAction)enableRemoteSleep:(id)sender {
+	isSleepEnabled = [self.sleepEnabled state];
+}
+
+- (void)fileNotifications {
+    //These notifications are filed on NSWorkspace's notification center, not the default
+    // notification center. You will not receive sleep/wake notifications if you file
+    //with the default notification center.
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+														   selector: @selector(receiveSleepNote:)
+															   name: NSWorkspaceWillSleepNotification object: NULL];
+	
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+														   selector: @selector(receiveWakeNote:)
+															   name: NSWorkspaceDidWakeNotification object: NULL];
+}
+
+// See https://developer.apple.com/library/mac/#qa/qa1340/_index.html#//apple_ref/doc/uid/DTS10003321
+- (void)receiveSleepNote:(NSNotification*)note {
+	[self.sshLog insertText:[NSString stringWithFormat:@"receiveSleepNote START: %@\n", [note name]]];
+	
+	if (isSleepEnabled) {
+		/////////////
+		// http://thebsdbox.co.uk
+		/////////////
+		// Create server instance (this can be passed around as it contains the socket info etc..)
+		DFSSHServer *server = [[DFSSHServer alloc] init];
+		[server setSSHHost:[self.hostIP stringValue]
+					  port:22
+					  user:[self.hostUser stringValue]
+					   key:@""
+					keypub:@""
+				  password:[self.hostPassword stringValue]];
+		
+		// Create connection instance, this will be changed at a later date to use class methods so wont
+		// need instantiating
+		DFSSHConnector *connection = [[DFSSHConnector alloc] init];
+		
+		
+		// Set connection status to Auto Detect (will check for keyboard/password/key)
+		// and connect
+		[connection connect:server connectionType:[DFSSHConnectionType auto]];
+		
+		// if connected try the following commands
+		if ([server connectionStatus]) {
+			[self.sshLog insertText:@"Server 1 connected"];
+			
+			//NSString *returnState = [DFSSHOperator execCommand:@"osascript -e 'tell application \"System Events\" to sleep'" server:server];
+			NSString *returnState = [DFSSHOperator execCommand:@"open ~/Desktop" server:server];
+			if (returnState) [self.sshLog insertText:returnState];
+		}
+		
+		// Close connection
+		[connection closeSSH:server];
+		
+		//release
+		[connection release];
+		[server release];
+	}
+	
+	[self.sshLog insertText:[NSString stringWithFormat:@"receiveSleepNote END: %@\n", [note name]]];
+}
+
+- (void)receiveWakeNote:(NSNotification*)note {
+	[self.sshLog insertText:[NSString stringWithFormat:@"receiveWakeNote: %@\n", [note name]]];
+}
+
+- (void)loadPreferences {
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"HostInfo" inManagedObjectContext:context];
+	[fetchRequest setEntity:entity];
+	
+	NSError *error;
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	if ([fetchedObjects count] == 0) {
+		NSLog(@"There is no preference history.");
+	} else if ([fetchedObjects count] == 1) {
+		HostInfo *preference = [fetchedObjects objectAtIndex:0];
+		[self.hostIP setStringValue:[preference ip]];
+		[self.hostUser setStringValue:[preference user]];
+	} else {
+		NSLog(@"There are %lu objects. Stopping.", [fetchedObjects count]);
+	}
+}
+- (void)savePreferences {
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"HostInfo" inManagedObjectContext:context];
+	[fetchRequest setEntity:entity];
+	
+	NSError *error;
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	if ([fetchedObjects count] == 0) {
+		HostInfo *newPref = [NSEntityDescription insertNewObjectForEntityForName:@"HostInfo" inManagedObjectContext:context];
+		[newPref setIp:[self.hostIP stringValue]];
+		[newPref setUser:[self.hostUser stringValue]];
+	} else if ([fetchedObjects count] == 1) {
+		HostInfo *currentPref = [fetchedObjects objectAtIndex:0];
+		[currentPref setIp:[self.hostIP stringValue]];
+		[currentPref setUser:[self.hostUser stringValue]];
+	} else {
+		NSLog(@"There are %lu objects. Stopping.", [fetchedObjects count]);
+	}
+	
+	if (![context save:&error]) {
+		NSLog(@"Whoops! There was an error while saving: %@", [error localizedDescription]);
+	}
+}
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
+	// Add the current settings to the managedObjectContext.
+	if ([[self.hostIP stringValue] isNotEqualTo:@""]) {
+		[self savePreferences];
+	}
+	
     // Save changes in the application's managed object context before the application terminates.
     
     if (!_managedObjectContext) {

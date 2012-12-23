@@ -14,6 +14,15 @@
 		1AFC3E521687A55000B0E967 /* JRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E511687A55000B0E967 /* JRAppDelegate.m */; };
 		1AFC3E551687A55000B0E967 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC3E531687A55000B0E967 /* MainMenu.xib */; };
 		1AFC3E581687A55000B0E967 /* RemoteSleeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E561687A55000B0E967 /* RemoteSleeper.xcdatamodeld */; };
+		1AFC3E5F1687A81300B0E967 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC3E5E1687A81300B0E967 /* libz.dylib */; };
+		1AFC3E611687A81B00B0E967 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC3E601687A81B00B0E967 /* libcrypto.dylib */; };
+		1AFC3E821687A83100B0E967 /* DFSSHConnectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E691687A83100B0E967 /* DFSSHConnectionType.m */; };
+		1AFC3E831687A83100B0E967 /* DFSSHConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E6A1687A83100B0E967 /* DFSSHConnector.m */; };
+		1AFC3E841687A83100B0E967 /* DFSSHOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E6B1687A83100B0E967 /* DFSSHOperator.m */; };
+		1AFC3E851687A83100B0E967 /* DFSSHServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E6C1687A83100B0E967 /* DFSSHServer.m */; };
+		1AFC3E861687A83100B0E967 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC3E811687A83100B0E967 /* libssh2.a */; };
+		1AFC3E891687AB6000B0E967 /* HostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC3E881687AB6000B0E967 /* HostInfo.m */; };
+		1AFC3E931687B6F800B0E967 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC3E921687B6F800B0E967 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +40,37 @@
 		1AFC3E511687A55000B0E967 /* JRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRAppDelegate.m; sourceTree = "<group>"; };
 		1AFC3E541687A55000B0E967 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1AFC3E571687A55000B0E967 /* RemoteSleeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemoteSleeper.xcdatamodel; sourceTree = "<group>"; };
+		1AFC3E5E1687A81300B0E967 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1AFC3E601687A81B00B0E967 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		1AFC3E641687A83100B0E967 /* DFSSHConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSSHConnectionType.h; sourceTree = "<group>"; };
+		1AFC3E651687A83100B0E967 /* DFSSHConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSSHConnector.h; sourceTree = "<group>"; };
+		1AFC3E661687A83100B0E967 /* DFSSHOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSSHOperator.h; sourceTree = "<group>"; };
+		1AFC3E671687A83100B0E967 /* DFSSHServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSSHServer.h; sourceTree = "<group>"; };
+		1AFC3E691687A83100B0E967 /* DFSSHConnectionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSSHConnectionType.m; sourceTree = "<group>"; };
+		1AFC3E6A1687A83100B0E967 /* DFSSHConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSSHConnector.m; sourceTree = "<group>"; };
+		1AFC3E6B1687A83100B0E967 /* DFSSHOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSSHOperator.m; sourceTree = "<group>"; };
+		1AFC3E6C1687A83100B0E967 /* DFSSHServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSSHServer.m; sourceTree = "<group>"; };
+		1AFC3E6F1687A83100B0E967 /* channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channel.h; sourceTree = "<group>"; };
+		1AFC3E701687A83100B0E967 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		1AFC3E711687A83100B0E967 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		1AFC3E721687A83100B0E967 /* libgcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libgcrypt.h; sourceTree = "<group>"; };
+		1AFC3E731687A83100B0E967 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2.h; sourceTree = "<group>"; };
+		1AFC3E741687A83100B0E967 /* libssh2_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_config.h; sourceTree = "<group>"; };
+		1AFC3E751687A83100B0E967 /* libssh2_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_priv.h; sourceTree = "<group>"; };
+		1AFC3E761687A83100B0E967 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_publickey.h; sourceTree = "<group>"; };
+		1AFC3E771687A83100B0E967 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_sftp.h; sourceTree = "<group>"; };
+		1AFC3E781687A83100B0E967 /* mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mac.h; sourceTree = "<group>"; };
+		1AFC3E791687A83100B0E967 /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		1AFC3E7A1687A83100B0E967 /* openssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl.h; sourceTree = "<group>"; };
+		1AFC3E7B1687A83100B0E967 /* packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packet.h; sourceTree = "<group>"; };
+		1AFC3E7C1687A83100B0E967 /* session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = session.h; sourceTree = "<group>"; };
+		1AFC3E7D1687A83100B0E967 /* sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sftp.h; sourceTree = "<group>"; };
+		1AFC3E7E1687A83100B0E967 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
+		1AFC3E7F1687A83100B0E967 /* userauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userauth.h; sourceTree = "<group>"; };
+		1AFC3E811687A83100B0E967 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
+		1AFC3E871687AB6000B0E967 /* HostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostInfo.h; sourceTree = "<group>"; };
+		1AFC3E881687AB6000B0E967 /* HostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostInfo.m; sourceTree = "<group>"; };
+		1AFC3E921687B6F800B0E967 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFC3E611687A81B00B0E967 /* libcrypto.dylib in Frameworks */,
+				1AFC3E5F1687A81300B0E967 /* libz.dylib in Frameworks */,
 				1AFC3E3F1687A55000B0E967 /* Cocoa.framework in Frameworks */,
+				1AFC3E861687A83100B0E967 /* libssh2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +91,9 @@
 		1AFC3E2F1687A54F00B0E967 = {
 			isa = PBXGroup;
 			children = (
+				1AFC3E921687B6F800B0E967 /* readme.md */,
+				1AFC3E621687A83100B0E967 /* DFSSHWrapper */,
+				1AFC3E6D1687A83100B0E967 /* libssh2_xcode */,
 				1AFC3E441687A55000B0E967 /* RemoteSleeper */,
 				1AFC3E3D1687A55000B0E967 /* Frameworks */,
 				1AFC3E3B1687A55000B0E967 /* Products */,
@@ -65,6 +111,8 @@
 		1AFC3E3D1687A55000B0E967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AFC3E601687A81B00B0E967 /* libcrypto.dylib */,
+				1AFC3E5E1687A81300B0E967 /* libz.dylib */,
 				1AFC3E3E1687A55000B0E967 /* Cocoa.framework */,
 				1AFC3E401687A55000B0E967 /* Other Frameworks */,
 			);
@@ -88,6 +136,8 @@
 				1AFC3E511687A55000B0E967 /* JRAppDelegate.m */,
 				1AFC3E531687A55000B0E967 /* MainMenu.xib */,
 				1AFC3E561687A55000B0E967 /* RemoteSleeper.xcdatamodeld */,
+				1AFC3E871687AB6000B0E967 /* HostInfo.h */,
+				1AFC3E881687AB6000B0E967 /* HostInfo.m */,
 				1AFC3E451687A55000B0E967 /* Supporting Files */,
 			);
 			path = RemoteSleeper;
@@ -103,6 +153,78 @@
 				1AFC3E4D1687A55000B0E967 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AFC3E621687A83100B0E967 /* DFSSHWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E631687A83100B0E967 /* headers */,
+				1AFC3E681687A83100B0E967 /* source */,
+			);
+			path = DFSSHWrapper;
+			sourceTree = "<group>";
+		};
+		1AFC3E631687A83100B0E967 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E641687A83100B0E967 /* DFSSHConnectionType.h */,
+				1AFC3E651687A83100B0E967 /* DFSSHConnector.h */,
+				1AFC3E661687A83100B0E967 /* DFSSHOperator.h */,
+				1AFC3E671687A83100B0E967 /* DFSSHServer.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		1AFC3E681687A83100B0E967 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E691687A83100B0E967 /* DFSSHConnectionType.m */,
+				1AFC3E6A1687A83100B0E967 /* DFSSHConnector.m */,
+				1AFC3E6B1687A83100B0E967 /* DFSSHOperator.m */,
+				1AFC3E6C1687A83100B0E967 /* DFSSHServer.m */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		1AFC3E6D1687A83100B0E967 /* libssh2_xcode */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E6E1687A83100B0E967 /* include */,
+				1AFC3E801687A83100B0E967 /* lib */,
+			);
+			path = libssh2_xcode;
+			sourceTree = "<group>";
+		};
+		1AFC3E6E1687A83100B0E967 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E6F1687A83100B0E967 /* channel.h */,
+				1AFC3E701687A83100B0E967 /* comp.h */,
+				1AFC3E711687A83100B0E967 /* crypto.h */,
+				1AFC3E721687A83100B0E967 /* libgcrypt.h */,
+				1AFC3E731687A83100B0E967 /* libssh2.h */,
+				1AFC3E741687A83100B0E967 /* libssh2_config.h */,
+				1AFC3E751687A83100B0E967 /* libssh2_priv.h */,
+				1AFC3E761687A83100B0E967 /* libssh2_publickey.h */,
+				1AFC3E771687A83100B0E967 /* libssh2_sftp.h */,
+				1AFC3E781687A83100B0E967 /* mac.h */,
+				1AFC3E791687A83100B0E967 /* misc.h */,
+				1AFC3E7A1687A83100B0E967 /* openssl.h */,
+				1AFC3E7B1687A83100B0E967 /* packet.h */,
+				1AFC3E7C1687A83100B0E967 /* session.h */,
+				1AFC3E7D1687A83100B0E967 /* sftp.h */,
+				1AFC3E7E1687A83100B0E967 /* transport.h */,
+				1AFC3E7F1687A83100B0E967 /* userauth.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1AFC3E801687A83100B0E967 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC3E811687A83100B0E967 /* libssh2.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +282,7 @@
 				1AFC3E491687A55000B0E967 /* InfoPlist.strings in Resources */,
 				1AFC3E4F1687A55000B0E967 /* Credits.rtf in Resources */,
 				1AFC3E551687A55000B0E967 /* MainMenu.xib in Resources */,
+				1AFC3E931687B6F800B0E967 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +296,11 @@
 				1AFC3E4B1687A55000B0E967 /* main.m in Sources */,
 				1AFC3E521687A55000B0E967 /* JRAppDelegate.m in Sources */,
 				1AFC3E581687A55000B0E967 /* RemoteSleeper.xcdatamodeld in Sources */,
+				1AFC3E821687A83100B0E967 /* DFSSHConnectionType.m in Sources */,
+				1AFC3E831687A83100B0E967 /* DFSSHConnector.m in Sources */,
+				1AFC3E841687A83100B0E967 /* DFSSHOperator.m in Sources */,
+				1AFC3E851687A83100B0E967 /* DFSSHServer.m in Sources */,
+				1AFC3E891687AB6000B0E967 /* HostInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +392,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoteSleeper/RemoteSleeper-Prefix.pch";
 				INFOPLIST_FILE = "RemoteSleeper/RemoteSleeper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libssh2_xcode/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +408,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoteSleeper/RemoteSleeper-Prefix.pch";
 				INFOPLIST_FILE = "RemoteSleeper/RemoteSleeper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libssh2_xcode/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -300,6 +436,7 @@
 				1AFC3E5D1687A55000B0E967 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
